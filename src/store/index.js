@@ -62,12 +62,6 @@ export const actions = {
   },
   async getNft({ dispatch }, url) {
 
-    // check url is image
-    if (!url.match(/\.(jpeg|jpg|gif|png)$/)) {
-      return { status: 'error', msg: "Please enter a valid image url" }
-    }
-
-
     // check the marketplace url
     // is opensea
     if (url.startsWith("https://opensea.io/")) {
@@ -99,12 +93,20 @@ export const actions = {
 
       console.log('Asset original url', asset.imageUrlOriginal)
 
+      // check url is image
+      if (!asset.imageUrlOriginal.match(/\.(jpeg|jpg|gif|png)$/)) {
+        return { status: 'error', msg: "Please enter a valid image url" }
+      }
+
+      let assetUrl = null
       // if asset.imageUrlOriginal is from ipfs - no CORS needed
       if (asset.imageUrlOriginal.search("ipfs") > -1) {
-        return { assetUrl: asset.imageUrlOriginal, tokenAddress, tokenId }
+        assetUrl = asset.imageUrlOriginal
       } else {
-        return { assetUrl: asset.imageUrl, tokenAddress, tokenId }
+        assetUrl = asset.imageUrl
       }
+
+      return { assetUrl, tokenAddress, tokenId }
     } else {
       return { status: 'error', msg: "Invalid asset url" }
     }
