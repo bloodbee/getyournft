@@ -8,7 +8,7 @@
   <Form></Form>
 
   <hr>
-    <p>You can find the repository on <a href="https://github.com/bloodbee/getyournft" target="_blank">github</a></p>
+  <p>You can find the repository on <a href="https://github.com/bloodbee/getyournft" target="_blank">github</a></p>
   <p>Any inquiries, please contact me <a href="mailto:mathieu@bloodbee.space">mathieu@bloodbe.space</a></p>
 </template>
 

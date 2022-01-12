@@ -54,6 +54,7 @@ export default {
 
 <template>
   <div class="form-container">
+    <label>Supported formats (JPEG, JPG, PNG or GIF)</label>
     <form v-if="!isLoading">
       <input v-model="assetUrl" type="text" placeholder="Enter an asset URL" />
 

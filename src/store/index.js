@@ -62,6 +62,11 @@ export const actions = {
   },
   async getNft({ dispatch }, url) {
 
+    // check url is image
+    if (!url.match(/\.(jpeg|jpg|gif|png)$/)) {
+      return { status: 'error', msg: "Please enter a valid image url" }
+    }
+
 
     // check the marketplace url
     // is opensea
