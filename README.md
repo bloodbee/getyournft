@@ -1,4 +1,11 @@
-# getyournft
+# Get Your NFT
+Download your NFT from your favorite marketplace
+
+Actually working only with opensea and ipfs.
+More marketplace and files system to come.
+
+You can find the web version here : [https://getyournft.netlify.app](https://getyournft.netlify.app)
+
 
 ## Project setup
 ```
@@ -9,16 +16,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
